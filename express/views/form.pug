@@ -1,0 +1,20 @@
+html
+   head
+      title Form Tester
+   body
+      form(action = "/", method = "POST")
+         div
+            label(for = "say") Say:
+            input(name = "say" value = "Hi")
+         br
+         div
+            label(for = "to") To:
+            input(name = "to" value = "Express forms")
+         br
+         div
+            if (firstVisit)
+                h3(style = "color:blue") Welcome to this page for the first time!
+            else
+                h3(style = "color:blue") You visited this page #{viewCount} times
+         br
+         button(type = "submit") Send my greetings
